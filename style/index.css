@@ -200,7 +200,6 @@ body {
 .about {
   display: flex;
   flex-direction: column;
-  width: 791px;
   margin: 0 auto;
   text-align: center;
 }
@@ -397,11 +396,66 @@ body {
     display: block;
     margin-right: 20px;
   }
+
+  .content .content__second .info {
+    margin-right: 140px;
+  }
+}
+@media (max-width: 640px) {
+  .careers {
+    margin-left: 40px;
+  }
+
+  .content .content__second .info {
+    margin-right: 0;
+  }
+
+  .content .content__second .position .position__title {
+    font-size: 18px;
+  }
+
+  .content .content__second .position .position__discription {
+    font-size: 14px;
+  }
+
+  .content .content__second .position {
+    padding: 24px;
+  }
+
+  .content .content__second .position:hover .learnMore {
+    display: none;
+  }
+
+  .footer .footer__top .footer__content .footer__content--first {
+    flex-direction: column;
+  }
+
+  .footer .footer__top .footer__content {
+    padding-top: 200px;
+    padding-bottom: 0px;
+  }
+
+  .footer .footer__top .footer__content .footer__content--second {
+    margin-right: 0;
+  }
 }
 @media (max-width: 320px) {
   body {
     background-color: #e9f3bd;
     box-shadow: none;
+    max-width: 320px;
+  }
+
+  .careers {
+    margin-left: 20px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .about {
+    max-width: 320px;
   }
 }
 

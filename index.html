@@ -14,9 +14,19 @@
 
 <body>
     <header class="header">
-        <figure>
+        <!-- <figure>
             <img alt="logo" class="header__img" src="./img/LogoTop.png">
-        </figure>
+        </figure> -->
+        <figure>
+                <img alt="logo" class="header__img" 
+                srcset="./img/Logo320.png 320w,
+                        ./img/Logo768.png 768w,
+                        ./img/LogoTop.png 1440w"
+                sizes="(max-width: 320px) 280px,
+                        (max-width: 768px) 740px,
+                        1440px"
+                src="./img/LogoTop.png">
+            </figure>
         <button class="burger" type="button"></button>
         <nav class="header__nav">
             <ul class="list">
