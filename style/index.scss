@@ -11,7 +11,8 @@ $secondaryColor: #6F7583;
     text-decoration: none;
 :hover {
 color: #9DD241;
-text-decoration: underline;
+transform: scale(1.1);
+transition: .2s;
 cursor: pointer;
 }
 }
@@ -37,6 +38,11 @@ body {
         border: none;
         background: url(../img/burger.png) no-repeat;
         outline: none;
+    }
+    .header__img:hover {
+cursor: pointer;
+transform: scale(1.2);
+transition: 1s;
     }
     .header__nav {
         .list{
@@ -89,6 +95,10 @@ body {
             color: $primaryColor;
            }
     }
+}
+.careers:hover {
+ font-weight: bold;
+transition: .2s;
 }
 
 .content {
@@ -189,6 +199,8 @@ margin: 0 auto;
      .position:hover {
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
         border-radius: 5px;
+        transform: scale(1.03);
+        transition: 1s;
         .learnMore {
             display: block;
         }
@@ -243,6 +255,8 @@ margin: 0 auto;
     border-radius: 5px;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
     cursor: pointer;
+    transform: scale(1.08);
+    transition: 1s ease;
 }
 .getInTouch {
     display: none;
@@ -262,6 +276,9 @@ margin: 0 auto;
 .getInTouch:hover {
     color: $secondaryColor;
     background-color: #fff;
+    transform: scale(1.08);
+    transition: 1s;
+    
     cursor: pointer;
     border: 1px solid rgba(41, 47, 66, 0.1);
 }
@@ -301,6 +318,7 @@ margin: 0 auto;
                         border-radius: 5px;
                         font-family: $fontPrimary;
                         margin-bottom: 30px;
+                        outline: none;
                     }
                 }
                 .logoText__text {
@@ -312,7 +330,11 @@ margin: 0 auto;
             
             .logoText {
                 width: 385px;
-                
+                img:hover {
+                    transform: scale(1.1);
+                    transition: 1s;
+                    cursor: pointer;
+                }
             }
 
         }
@@ -385,6 +407,9 @@ margin: 0 auto;
        }
     }
 
+    
+    
+
 @media (max-width: 768px) {
 
     .header__nav {
@@ -442,10 +467,8 @@ margin: 0 auto;
 }
 @media (max-width: 350px) {
     body {
-      
-       box-shadow: none;
-     
-    }
+      box-shadow: none;
+     }
       .careers {
         margin-left: 20px;
     }
@@ -463,4 +486,29 @@ margin: 0 auto;
     .footer .footer__top .footer__content .footer__content--second {
         flex-direction: column;
     }
+    .allPages__list, .information__list, .socials__list {
+        display: none;
+    }
+    
+
+.mobile-open {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .plus {
+        display: block;
+        background: url(../img/plusMobileFooter.png) no-repeat;
+        width: 18px;
+        height: 18px;
+        
+    }
+    
+    .minus {
+        display: none;
+        background: url(../img/minuse-mobile.png) no-repeat;
+        width: 18px;
+        height: 18px;
+        
+    }
+}
 }

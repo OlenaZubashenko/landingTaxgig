@@ -5,6 +5,7 @@
     margin: 0 auto;
     width: 100%;
     background: #292f42;
+   
 }
 .form-top {
     display: flex;
@@ -46,6 +47,8 @@ line-height: 24px;
     margin: 0 auto;
     margin-bottom: 164px;
 }
+
+
 
 @media (max-width: 768px) {
     .form-wrapper {

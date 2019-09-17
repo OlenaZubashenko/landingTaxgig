@@ -1,8 +1,8 @@
 
 let positions = [
-    { name: "Junior",   salary: 500,    description: "la-la-la" },
-    { name: "Middle",   salary: 1500,   description: "la-la-la" },
-    { name: "Senior",   salary: 2500,   description: "la-la-la" }
+    { name: "Junior",   salary: 500,    description: "about junior" },
+    { name: "Middle",   salary: 1500,   description: "about middle" },
+    { name: "Senior",   salary: 2500,   description: "about senoir" }
 ];
 
 let getPosition = (name) => {

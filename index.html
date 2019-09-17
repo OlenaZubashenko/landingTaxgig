@@ -48,7 +48,7 @@
         <!-- <figure>
             <img alt="logo" class="header__img" src="./img/LogoTop.png">
         </figure> -->
-        <figure >
+        <figure>
             <img alt="logo" class="header__img" srcset="./img/Logo320.png 300w,
                         ./img/Logo768.png 768w,
                         ./img/LogoTop.png 1440w" sizes="(max-width: 320px) 400px,
@@ -68,7 +68,7 @@
                     <a href="#">faq</a>
                 </li>
                 <li class="list__item">
-                    <button type="button" class="login">login</button>
+                    <button type="button" class="login" id="login-nav">login</button>
                 </li>
                 <li class="list__item">
                     <a href="#">
@@ -146,7 +146,7 @@
             We are always open for talented people striving to make an impact
         </p>
     </section>
-    <button class="testMe" type="button">Test me now</button>
+    <button class="testMe" id="testMe" type="button">Test me now</button>
     <button class="getInTouch" id="getInTouch" type="button">get in touch</button>
     <footer class="footer">
         <div class="footer__top">
@@ -165,11 +165,12 @@
                 </div>
                 <div class="footer__content--second">
                     <div class="allPages foo-title">
-                        <div class="allPages__wrapper">
+                        <div class="allPages__wrapper mobile-open">
                             <h2 class="allPages__title">All pages</h2>
-                            <div id="all-pages-more" class="plus"></div>
+                            <div id="all-pages-more-plus" class="plus"></div>
+                            <div id="all-pages-minus" class="minus"></div>
                         </div>
-                        <ul class="allPages__list">
+                        <ul class="allPages__list" id="all-list">
                             <li class="allPages__item"></li>
                             <li class="allPages__item">
                                 <a href="#">Sing in</a>
@@ -189,12 +190,13 @@
                         </ul>
                     </div>
                     <div class="information foo-title">
-                        <div class="info-wrapper">
-                                <h2 class="information__title">Information</h2>
-                                <div id="info-more" class="plus"></div>
+                        <div class="info-wrapper mobile-open">
+                            <h2 class="information__title">Information</h2>
+                            <div id="info-more-plus" class="plus"></div>
+                            <div id="info-minus" class="minus"></div>
                         </div>
-                        
-                        <ul class="information__list">
+
+                        <ul class="information__list" id="info-list">
                             <li class="information__item">
                                 <a href="#">FAQ</a>
                             </li>
@@ -210,9 +212,13 @@
                         </ul>
                     </div>
                     <div class="socials foo-title">
-                        <h2 class="socials__title">Socials</h2>
-                        <div id="social-more" class="plus"></div>
-                        <ul class="socials__list">
+                        <div class="social-wrapper mobile-open">
+                            <h2 class="socials__title">Socials</h2>
+                            <div id="social-more-plus" class="plus"></div>
+                            <div id="social-minus" class="minus"></div>
+                        </div>
+
+                        <ul class="socials__list" id="social-list">
                             <li class="socials__item">
                                 <a href="#">Facebook</a>
                             </li>
@@ -251,5 +257,7 @@
     </div>
     <script src="./index.js"></script>
     <script src="./form.js"></script>
+    <script src="./openListMobile.js"></script>
 </body>
+
 </html>
