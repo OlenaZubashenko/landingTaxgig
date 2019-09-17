@@ -397,6 +397,7 @@ margin: 0 auto;
     .content .content__second .info {
         margin-right: 140px;
     }
+    
 }
 
 @media (max-width: 640px) {
@@ -431,15 +432,21 @@ margin: 0 auto;
     .footer .footer__top .footer__content .footer__content--second {
         margin-right: 0;
     }
-}
-@media (max-width: 320px) {
-    body {
-       background-color: rgb(233, 243, 189);
-       box-shadow: none;
-       max-width: 320px;
+    .footer .footer__top .footer__content .footer__content--first .feedback .feedback__btn {
+        width: 275px; 
+    }
+    .footer .footer__top .footer__content .footer__content--first .logoText {
+        max-width: 300px;
     }
     
-    .careers {
+}
+@media (max-width: 350px) {
+    body {
+      
+       box-shadow: none;
+     
+    }
+      .careers {
         margin-left: 20px;
     }
     .content {
@@ -447,6 +454,13 @@ margin: 0 auto;
     }
     
     .about{
-        max-width: 320px;
+        max-width: 300px;
+    }
+    .footer .footer__top .footer__content {
+        background: url(../img/bg320.png) no-repeat;
+        background-size: cover;
+    }
+    .footer .footer__top .footer__content .footer__content--second {
+        flex-direction: column;
     }
 }

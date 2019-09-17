@@ -438,12 +438,18 @@ body {
   .footer .footer__top .footer__content .footer__content--second {
     margin-right: 0;
   }
+
+  .footer .footer__top .footer__content .footer__content--first .feedback .feedback__btn {
+    width: 275px;
+  }
+
+  .footer .footer__top .footer__content .footer__content--first .logoText {
+    max-width: 300px;
+  }
 }
-@media (max-width: 320px) {
+@media (max-width: 350px) {
   body {
-    background-color: #e9f3bd;
     box-shadow: none;
-    max-width: 320px;
   }
 
   .careers {
@@ -455,7 +461,16 @@ body {
   }
 
   .about {
-    max-width: 320px;
+    max-width: 300px;
+  }
+
+  .footer .footer__top .footer__content {
+    background: url(../img/bg320.png) no-repeat;
+    background-size: cover;
+  }
+
+  .footer .footer__top .footer__content .footer__content--second {
+    flex-direction: column;
   }
 }
 

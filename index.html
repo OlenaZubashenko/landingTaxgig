@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="./style/index.css" rel="stylesheet">
+    <link href="./style/form.css" rel="stylesheet">
+    <link href="./style/loginForm.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700,800&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora|Roboto&display=swap&subset=cyrillic" rel="stylesheet">
@@ -13,21 +15,47 @@
 </head>
 
 <body>
+    <div id="position"></div>
+    <div class="form-wrapper" id="form">
+        <div class="form-top" id="form-top">
+            <figure>
+                <img src="./img/Logo768.png" alt="logo">
+            </figure>
+            <figure>
+                <img src="./img/closeBtn.png" alt="button close" class="form-close" id="form-close">
+            </figure>
+        </div>
+        <ul class="form-list">
+            <li class="form-list__item">
+                <a href="#">File</a>
+            </li>
+            <li class="form-list__item">
+                <a href="#">Be a pro</a>
+            </li>
+            <li class="form-list__item">
+                <a href="#">Blog</a>
+            </li>
+            <li class="form-list__item">
+                <a href="#">About</a>
+            </li>
+            <li class="form-list__item">
+                <a href="#">FAQ</a>
+            </li>
+        </ul>
+        <button type="button" class="form-login" id="login">login</button>
+    </div>
     <header class="header">
         <!-- <figure>
             <img alt="logo" class="header__img" src="./img/LogoTop.png">
         </figure> -->
-        <figure>
-                <img alt="logo" class="header__img" 
-                srcset="./img/Logo320.png 320w,
+        <figure >
+            <img alt="logo" class="header__img" srcset="./img/Logo320.png 300w,
                         ./img/Logo768.png 768w,
-                        ./img/LogoTop.png 1440w"
-                sizes="(max-width: 320px) 280px,
+                        ./img/LogoTop.png 1440w" sizes="(max-width: 320px) 400px,
                         (max-width: 768px) 740px,
-                        1440px"
-                src="./img/LogoTop.png">
-            </figure>
-        <button class="burger" type="button"></button>
+                        1440px" src="./img/LogoTop.png">
+        </figure>
+        <button class="burger" type="button" id="burger"></button>
         <nav class="header__nav">
             <ul class="list">
                 <li class="list__item">
@@ -93,21 +121,21 @@
                     <h2 class="position__title">Senior ui/ux designer</h2>
                     <p class="position__discription">Coral Gables, FL</p>
                 </div>
-                <button type="button" class="learnMore"></button>
+                <button type="button" class="learnMore" onclick="loadPosition('Junior');"></button>
             </div>
             <div class="position">
                 <div class="wrapper">
                     <h2 class="position__title">Senior ui/ux designer</h2>
                     <p class="position__discription">Coral Gables, FL</p>
                 </div>
-                <button type="button" class="learnMore"></button>
+                <button type="button" class="learnMore" onclick="loadPosition('Middle');"></button>
             </div>
             <div class="position">
                 <div class="wrapper">
                     <h2 class="position__title">Senior ui/ux designer</h2>
                     <p class="position__discription">Coral Gables, FL</p>
                 </div>
-                <button type="button" class="learnMore"></button>
+                <button type="button" class="learnMore" onclick="loadPosition('Senior');"></button>
             </div>
         </div>
     </div>
@@ -119,7 +147,7 @@
         </p>
     </section>
     <button class="testMe" type="button">Test me now</button>
-    <button class="getInTouch" type="button">get in touch</button>
+    <button class="getInTouch" id="getInTouch" type="button">get in touch</button>
     <footer class="footer">
         <div class="footer__top">
             <div class="footer__content">
@@ -137,7 +165,10 @@
                 </div>
                 <div class="footer__content--second">
                     <div class="allPages foo-title">
-                        <h2 class="allPages__title">All pages</h2>
+                        <div class="allPages__wrapper">
+                            <h2 class="allPages__title">All pages</h2>
+                            <div id="all-pages-more" class="plus"></div>
+                        </div>
                         <ul class="allPages__list">
                             <li class="allPages__item"></li>
                             <li class="allPages__item">
@@ -158,7 +189,11 @@
                         </ul>
                     </div>
                     <div class="information foo-title">
-                        <h2 class="information__title">Information</h2>
+                        <div class="info-wrapper">
+                                <h2 class="information__title">Information</h2>
+                                <div id="info-more" class="plus"></div>
+                        </div>
+                        
                         <ul class="information__list">
                             <li class="information__item">
                                 <a href="#">FAQ</a>
@@ -176,6 +211,7 @@
                     </div>
                     <div class="socials foo-title">
                         <h2 class="socials__title">Socials</h2>
+                        <div id="social-more" class="plus"></div>
                         <ul class="socials__list">
                             <li class="socials__item">
                                 <a href="#">Facebook</a>
@@ -198,7 +234,22 @@
             <img src="./img/© 2018 taxgig. All rights reserved..png" alt="bottomImg" class="bottom__img">
         </div>
     </footer>
+    <div class="login-form" id="login-form">
+        <div class="img" id="login-close">
+            <img src="./img/closeBtn.png">
+        </div>
+        <h2>Sign in</h2>
+        <div class="wrapper-name text">
+            <label>Name:</label>
+            <input class="name field" type="text" placeholder="Your name">
+        </div>
+        <div class="wrapper-pass text">
+            <label>Password:</label>
+            <input class="password field" type="password" placeholder="Your password">
+        </div>
+        <button class="btn" id="signIn">Sign in</button>
+    </div>
     <script src="./index.js"></script>
+    <script src="./form.js"></script>
 </body>
-
 </html>
