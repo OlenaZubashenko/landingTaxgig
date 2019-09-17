@@ -199,6 +199,7 @@ body {
   background: url(../img/btnLearnMore.png) no-repeat;
   border: none;
   margin: auto 0;
+  outline: none;
 }
 .content .content__second .position .learnMore:hover {
   cursor: pointer;
@@ -355,6 +356,7 @@ body {
   letter-spacing: 0.3px;
 }
 .footer .footer__top .footer__content .footer__content--second .foo-title ul {
+  display: block;
   list-style: none;
   text-decoration: none;
   padding: 0;

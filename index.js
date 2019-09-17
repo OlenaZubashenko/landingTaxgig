@@ -1,4 +1,4 @@
-
+/*
 let positions = [
     { name: "Junior",   salary: 500,    description: "about junior" },
     { name: "Middle",   salary: 1500,   description: "about middle" },
@@ -31,3 +31,4 @@ let loadPosition = (name) => {
             container.innerHTML = html;
     }
 };
+*/
